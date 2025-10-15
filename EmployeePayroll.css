@@ -1,0 +1,26 @@
+body {
+    font-family: system-ui, sans-serif;
+    background-color: whitesmoke;
+    margin: 20px;
+    
+
+}
+
+div.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+}
+
+#heading1 {
+    text-decoration:dotted underline cyan;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+
+
