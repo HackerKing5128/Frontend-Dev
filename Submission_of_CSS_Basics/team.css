@@ -1,0 +1,76 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Flexbox layout for team cards */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+/* Individual team cards */
+.team-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile image */
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Role styling */
+.role {
+  color: #555;
+  font-style: italic;
+}
+
+/* Highlight the team lead */
+.lead {
+  background-color: #f4f9ff;
+  border: 2px solid #3498db;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #2c3e50;
+  color: white;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
