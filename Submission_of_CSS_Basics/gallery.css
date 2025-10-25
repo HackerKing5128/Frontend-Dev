@@ -1,0 +1,85 @@
+/* GENERAL STYLING */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  text-align: center;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2em 0;
+}
+
+/* GALLERY GRID: 3 columns x 2 rows */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 20px;
+  padding: 2em;
+  justify-items: center;
+}
+
+/* GALLERY ITEM */
+.gallery-item {
+  position: relative;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+/* IMAGE */
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* HOVER EFFECT */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* CAPTION OVERLAY */
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8em 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+/* RESPONSIVE: stack images on small screens */
+@media (max-width: 950px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+/* ===== GENERAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #222;
+  margin: 0;
+  padding: 0 10%;
+  background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2em 0 1em;
+  background-color: #1e1e1e;
+  color: #f9d342;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+.subheading {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.5em;
+  color: #fff;
+}
+
+/* Article Paragraphs */
+main p {
+  margin: 1.5em 0;           /* consistent spacing between paragraphs */
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* First letter styling */
+main p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+/* First line styling */
+main p::first-line {
+  font-weight: bold;
+}
+
+/* Highlight key words */
+mark {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid #1e1e1e;
+  background-color: #e0e0e0;
+  padding: 1em 1.5em;
+  margin: 2em 0;
+  font-style: italic;
+  color: #333;
+}

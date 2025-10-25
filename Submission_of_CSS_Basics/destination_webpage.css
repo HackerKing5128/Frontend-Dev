@@ -1,0 +1,135 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #111;
+  padding: 2em 0;
+}
+
+header h1 {
+  font-size: 2.5rem;     /* rem unit */
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 300;
+  color: #f9d342;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  background-color: #333;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f9d342;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 8vh 10%;
+  min-height: 60vh;
+}
+
+/* --- Parallax background sections --- */
+.parallax {
+  background-attachment: fixed;   /* Parallax-like effect */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Section 1: Intro (Parallax Image) */
+.intro {
+  background-image: url('assests/parallax1.png');
+}
+
+/* Section 2: Linear Gradient */
+.gradient-linear {
+  background: linear-gradient(135deg, #e63946, #1d3557);
+  color: #fff;
+}
+
+/* Section 3: Famous Places (Parallax Image) */
+.places {
+  background-image: url('assests/parallax2.png');
+}
+
+/* Section 4: Radial Gradient */
+.gradient-radial {
+  background: radial-gradient(circle, #ffb703, #fb8500);
+  color: #222;
+}
+
+/* Section 5: Travel Tips (Solid Background) */
+.travel {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* ===== Headings and Text ===== */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #f9d342;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+p, ul, ol {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* ===== List Styles ===== */
+ul, ol {
+  text-align: left;
+  margin-top: 1em;
+  line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #111;
+  color: #f9d342;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
