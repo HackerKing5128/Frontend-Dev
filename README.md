@@ -24,3 +24,8 @@ Each branch focuses on a specific concept or technology used in frontend develop
 
 ---
 
+## 🧭 How to Use
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/<your-username>/BridgeLabz-Training-3Y.git
