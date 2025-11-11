@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="m-0 p-0">
+    <!-- Navbar -->
+    <!-- keeps navbar at top -->
+    <nav class="navbar navbar-expand-lg fixed-top border-1" style="background-color: #0e0e5f;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 text-white">Store</span>
+
+            <!-- margin-start auto (buttons to right) -->
+            <div class="ms-auto">
+                <!-- margin-end (right) -->
+                <button class="btn btn-primary me-2">Download</button>
+                <button class="btn me-2"
+                    style="background-color: #0e0e5f; color: white; border: 1px solid grey;">Response</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+
+    <div class="container-fluid p-0" style="margin-top: 56px;">
+        <!-- removes gaps between columns -->
+        <div class="row g-0">
+
+            <!-- Sidebar -->
+            <!-- d-flex : display flex -->
+            <div class="col-md-2 position-fixed d-flex flex-column border-0"
+                style="background-color: #0e0e5f; top: 56px; bottom: 58px; left: 0; width: 16.6%;">
+                <!-- flex-grow-1: takes up available space, pushing Settings button to bottom -->
+                <div class="flex-grow-1">
+                    <!-- gap-2: space between buttons, margin-top, padding left/right-->
+                    <div class="d-flex flex-column gap-2 mt-3 px-2">
+                        <!-- width 100% of container -->
+                        <button class="btn btn-primary w-100">Home</button>
+                        <button class="btn btn-primary w-100">Products</button>
+                        <button class="btn btn-primary w-100">Messages</button>
+                        <button class="btn btn-primary w-100">Contact</button>
+                    </div>
+                </div>
+                <!--pb-3: padding-bottom-->
+                <div class="px-2 pb-3">
+                    <button class="btn btn-primary w-100">Settings</button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <!-- offsets content by 2 columns (for sidebar), all sides, min-height: ensures content fills screen -->
+            <div class="col-md-10 offset-md-2 p-4"
+                style="background-color: #f5f5f5; min-height: calc(100vh - 116px); margin-bottom: 60px;">
+                <h3>Welcome to the Store Dashboard</h3>
+
+                <!-- text-muted: light gray text color -->
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vel rem dolorum
+                    aliquid, placeat minus!</p>
+
+                <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit iure optio,
+                    obcaecati voluptatem quae aspernatur, hic enim ad vel maxime quasi illum, ex velit similique
+                    distinctio voluptatum. Reprehenderit tempora libero, laborum voluptatum expedita asperiores autem a
+                    porro. Qui, fugiat eligendi.</p>
+
+                <!-- Cards Pie Chart Section -->
+                <div class="row mt-4 mb-4">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    <strong>Store Statistics</strong>
+                                </div>
+                                <div class="card-body text-center">
+                                    <canvas id="pieChart" class="w-100 h-100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis hic quis cupiditate corporis
+                        natus molestiae minus impedit, suscipit inventore perspiciatis!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque delectus, fuga molestias
+                        necessitatibus obcaecati et saepe tempore tenetur quia distinctio dolorem harum dolore facilis!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- text-lg-start: aligns left on large screens -->
+    <footer class="text-center text-lg-start fixed-bottom border-0" style="background-color: #0e0e5f;">
+        <div class="text-center p-3" style="color: white;">
+            © 2025 Store Dashboard | Nakul Saini
+        </div>
+    </footer>
+
+    <!-- Chart.js Script -->
+    <script>
+        const ctx = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Total Orders', 'Total Revenue ($)', 'Customers', 'New Customers', 'Total Products'],
+                datasets: [{
+                    data: [1234, 4678, 1585, 789, 357],
+                    backgroundColor: [
+                        'yellowgreen',
+                        'orange',
+                        'lightgreen',
+                        'cyan',
+                        'royalblue',
+                    ],
+                    borderColor: 'transparent',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
